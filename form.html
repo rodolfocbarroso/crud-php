@@ -1,0 +1,64 @@
+<html>
+<head>
+    <title>Avaliação CRP</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
+    <script type="text/javascript" src="assets/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="assets/js/additional-methods.min.js"></script>
+    <script type="text/javascript" src="assets/js/localization/messages_pt_BR.js"></script>
+
+    <script src="assets/js/controller.js"></script>
+
+</head>
+<body onload="getListEstados();createOrEditFuncionario()">
+<div class="container">
+
+    <div class="row" style="margin-top: 10px">
+        <div class="col-lg-2">
+            <img src="assets/img/crp-logo.png">
+        </div>
+        <div class="col-lg-10">
+            <h1>Avaliação PHP</h1>
+        </div>
+    </div>
+
+    <hr/>
+
+    <h3 class="text-center">Formulário de Cadastro</h3>
+
+    <form id="idForm" method="post">
+
+        <div class="col-lg-6">
+            <input name="matricula" id="matricula" type="text" hidden>
+
+            <label for="nome">Nome:</label>
+            <input id="nome" name="nome" class="form-control" type="text"><br>
+
+            <label for="email">Email:</label>
+            <input id="email" name="email" class="form-control" type="email"><br>
+
+            <label for="dataNasc">Data de Nascimento:</label>
+            <input id="dataNasc" name="dataNasc" class="form-control" type="date"><br>
+
+            <div class="row">
+
+                <div class="col-lg-8">
+                    <label for="cidade">Cidade:</label>
+                    <input id="cidade" name="cidade" class="form-control" type="text">
+                </div>
+
+                <div class="col-lg-4">
+                    <label for="estado">Estado:</label>
+                    <select id="estado" class="form-control" name="estado"></select>
+                </div>
+
+            </div>
+            <br><button class="btn btn-primary">Salvar</button>
+        </div>
+    </form>
+
+</div>
+
+</body>
+</html>
