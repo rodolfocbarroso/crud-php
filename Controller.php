@@ -79,7 +79,7 @@ function FindAllEstados() {
 function removeFuncionario() {
     //implementar a funcionalidade de deletar o funcionario do banco de dados
     mysqli_query(getConnection(),"DELETE FROM funcionario WHERE matricula = ".$_POST['matricula']);
-    header('location: index.html');
+    //header('location: index.html');
    
 }
 

@@ -1,56 +1,63 @@
 <html>
+
 <head>
     <title>Avaliação CRP</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
 </head>
+
 <body onload="getListFuncionario()">
-<div class="container">
+    <div class="container">
 
-    <div class="row" style="margin-top: 10px">
-        <div class="col-lg-2">
-            <img src="assets/img/crp-logo.png">
-        </div>
-        <div class="col-lg-10">
-            <h1>Avaliação PHP</h1>
-        </div>
-    </div>
-
-    <hr/>
-
-    <h3 class="text-center">Lista de Funcionários</h3>
-
-    <a class="btn btn-primary" href="form.html">Novo Funcionário</a>
-
-    <table class="table" style="margin-top: 20px" id="tabelaLista">
-        <thead>
-            <tr>
-                <th>Nome</th>
-                <th>Data de Nascimento</th>
-                <th>Ações</th>
-            </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
-
-    <div id="modalAviso" class="modal" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <a class="close" data-dismiss="modal">&times;</a>
-                    <h4 class="modal-title">AVISO</h4>
-                </div>
-                <div id="idCorpo" class="modal-body"></div>
-                <div id="idRodaPe" class="modal-body"></div>
+        <div class="row" style="margin-top: 10px">
+            <div class="col-lg-2">
+                <!--<img src="assets/img/crp-logo.png">-->
+            </div>
+            <div class="col-lg-10">
+                <!--<h1>Avaliação PHP</h1> -->
             </div>
         </div>
+
+        <hr />
+
+        <h3 class="text-center">Lista de Funcionários</h3>
+
+        <a class="btn btn-primary" href="form.html">Novo Funcionário</a>
+
+        <table class="table" style="margin-top: 20px" id="tabelaLista">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Data de Nascimento</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        
+        <div id="modalDelete" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="gridSystemModalLabel">Modal title</h4>
+                </div>
+                <div id="modalBody" class="modal-body">
+                </div>
+                <div id="modalFooter" class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
     </div>
 
-</div>
-
-<script src="assets/js/jquery-3.1.1.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/controller.js"></script>
+    <script src="assets/js/jquery-3.1.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/controller.js"></script>
 
 </body>
+
 </html>
