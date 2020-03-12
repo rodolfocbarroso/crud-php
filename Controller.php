@@ -27,11 +27,8 @@ function FindFuncionarioByMatricula() {
     //ser utilizado no editar
     $buscar = mysqli_query(getConnection(), "SELECT * FROM funcionario WHERE matricula =" . $_REQUEST['matricula']);
     $dados = mysqli_fetch_array($buscar, MYSQLI_ASSOC);
-    $funcionario = [];
-    foreach ($dados as $key => $value) {
-        $funcionario[$key] = utf8_encode($value);
-    }
-    $funcionarios[] = $funcionario;
+
+    $funcionarios[] = $dados;
     echo json_encode($funcionarios, JSON_UNESCAPED_UNICODE);
 }
 
@@ -45,11 +42,7 @@ function listar() {
     for ($i = 0; $i < $num_busca; $i++) {
         $dados = mysqli_fetch_array($busca, MYSQLI_ASSOC);
 
-        $funcionario = [];
-        foreach($dados as $key => $value) {
-            $funcionario[$key] = utf8_encode($value);
-        }
-        $funcionarios[] = $funcionario;
+        $funcionarios[] = $dados;
     }
 
     echo json_encode($funcionarios, JSON_UNESCAPED_UNICODE);
@@ -65,12 +58,7 @@ function FindAllEstados() {
     for ($i = 0; $i < $num_busca; $i++) {
         $dados = mysqli_fetch_array($busca, MYSQLI_ASSOC);
 
-        //laço criado para converter codificação e evitar problemas com caracteres especiais
-        $estado = [];
-        foreach($dados as $key => $value) {
-            $estado[$key] = utf8_encode($value);
-        }
-        $estados[] = $estado;
+        $estados[] = $dados;
     }
 
     echo json_encode($estados, JSON_UNESCAPED_UNICODE);
