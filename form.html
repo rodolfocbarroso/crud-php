@@ -73,7 +73,10 @@
                         required: true,
                         maxlength: 100,
                         minlength: 10,
-                        minWords: 2
+                        minWords: 2,
+                        depends: function(){
+                                   $("#nome").css("border","2px orange solid");
+                            }
                     },
                     email: {
                         required: true,
